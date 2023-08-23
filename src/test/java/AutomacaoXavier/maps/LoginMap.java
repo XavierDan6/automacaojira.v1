@@ -6,19 +6,17 @@ import org.openqa.selenium.support.FindBy;
 public class LoginMap {
 
 
-    @FindBy (css = "*[name= 'os_username']")
+    @FindBy (xpath = "//*[@id=\"login-form-submit\"]")
     public WebElement btnLogin;
-    @FindBy(css = "#login-form-submit")
+    @FindBy(xpath = "//*[@id=\"login-form-username\"]")
     public WebElement inpUserName;
-    @FindBy(css = "*[type= 'password']")
+    @FindBy(xpath = "//*[@id=\"login-form-password\"]")
     public WebElement inpPassword;
 
-    @FindBy(css = "//*[@id=\"summary-val\"]")
-    public WebElement textLogado;
+   @FindBy(xpath = "//*[@id=\"summary-val\"]")
+   public WebElement textLogado;
 
-    @FindBy (css = "//*[@id=\"details-button\"]")
-    public WebElement btnAvancado;
-    @FindBy (css = "Ir para corp-sw-jira (não seguro)")
-    public WebElement linkIrJira;
+    @FindBy(xpath = "//*[@id=\"login-form\"]/div[1]/div[1]/p")
+    public WebElement textErroLogin;
 
 }

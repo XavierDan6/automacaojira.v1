@@ -5,6 +5,8 @@ import AutomacaoXavier.core.Driver;
 import AutomacaoXavier.maps.LoginMap;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class LoginPage {
     LoginMap loginMap;
 
@@ -27,8 +29,6 @@ public class LoginPage {
     public void setInpPassword(String password){
         if (password != null){
                 loginMap.inpPassword.sendKeys(password);
-
-
             }
         }
     public String getUsuariologado(){
@@ -36,11 +36,10 @@ public class LoginPage {
         return loginMap.textLogado.getText();
     }
 
-    public void clickbtnAvancado(){
-        loginMap.btnAvancado.click();
-    }
-    public void clicklinkIrJira(){
-        loginMap.linkIrJira.click();
+    public String getErroLogin(){
+        Driver.visibilityOf(loginMap.textErroLogin);
+        return loginMap.textErroLogin.getText();
+
     }
 
     }

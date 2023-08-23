@@ -31,7 +31,7 @@ public class Driver {
                     break;
 
         }
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         driver.manage().window().maximize();
     }
     public static WebDriver getDriver() {
@@ -43,8 +43,4 @@ public class Driver {
 
         }
 
-    public static void invisibilityOf(WebElement element){
-        wait.until(ExpectedConditions.invisibilityOf(element));
-
-    }
 }
